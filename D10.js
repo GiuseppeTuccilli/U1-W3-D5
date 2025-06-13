@@ -491,6 +491,23 @@ function tree(h) {
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+// funziona solo con numeri naturali positivi
+const isItPrime = function (n) {
+  let ar = [];
+  if (n > 0 && n <= 3) {
+    return true;
+  } else {
+    for (let i = 2; i <= n / 2; i++) {
+      ar.push(n % i);
+    }
+    let str = ar.toString();
+    if (str.includes("0") === true) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+};
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
@@ -621,3 +638,4 @@ console.log(searchAndDivide(movies, "Avengers"));
 console.log(removeIndex(movies, 1));
 halfTree(7);
 tree(7);
+console.log(isItPrime(17));
