@@ -450,6 +450,16 @@ const addTest = function () {
 
 */
 
+function halfTree(h) {
+  for (let i = 1; i <= h; i++) {
+    let a = "";
+    for (let j = 1; j <= i; j++) {
+      a += "*";
+    }
+    console.log(a);
+  }
+}
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -461,6 +471,22 @@ const addTest = function () {
   *****
 
 */
+
+function tree(h) {
+  for (let i = 1; i <= h; i++) {
+    let space = "";
+    for (let j = 1; j <= h - i; j++) {
+      space += " ";
+    }
+
+    let aster = "";
+    for (let j = 1; j <= 2 * i - 1; j++) {
+      aster += "*";
+    }
+
+    console.log(space + aster);
+  }
+}
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
@@ -593,3 +619,5 @@ console.log(sumAllTheYears(movies));
 console.log(searchByTitle(movies, "Avengers"));
 console.log(searchAndDivide(movies, "Avengers"));
 console.log(removeIndex(movies, 1));
+halfTree(7);
+tree(7);
